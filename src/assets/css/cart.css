@@ -1,0 +1,167 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #pay {
+    /* 116px - 164px top */
+    /* 60px - 100px  bottom */
+    padding: clamp(7.25rem, 16.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    background-color: #f7f7f7;
+    /* clips the svg wave from overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    /* Left Side Of Container */
+    /* Right Side of container */
+    /* Payment Section */
+  }
+  #pay .checkout-container {
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 4.9rem;
+  }
+  #pay em {
+    font-style: normal;
+    font-weight: 700;
+  }
+  #pay hr {
+    color: #fff;
+    margin-bottom: 1.2rem;
+  }
+  #pay .left-side {
+    max-width: 39.375rem;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    align-items: flex-start;
+    order: 2;
+  }
+  #pay .text-box {
+    background: rgba(95, 121, 134, 0.8);
+    width: 100%;
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 0;
+  }
+  #pay .receipt-heading {
+    font-size: 1.6rem;
+    text-align: left;
+    color: #1a1a1a;
+  }
+  #pay .right-side {
+    background-color: #fff;
+    padding: 1.8rem 3.2rem;
+  }
+  #pay .receipt {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  #pay .table {
+    border-collapse: separate;
+    border-spacing: 0 1.5rem;
+    color: #64645f;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  #pay .total td {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  #pay .price {
+    text-align: end;
+  }
+  #pay .payment-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  #pay .form-box {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+  }
+  #pay .card-logo {
+    font-size: 2rem;
+  }
+  #pay .expires {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  #pay .form-box label {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  #pay .form-box input {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  #pay .form-box select {
+    padding: 0.5rem;
+  }
+  #pay .form-box #cvv {
+    width: 25%;
+  }
+  #pay .cvv-info:link, #pay .cvv-info:visited {
+    color: inherit;
+    text-decoration: underline;
+  }
+  #pay .cvv-info:hover, #pay .cvv-info:active {
+    color: #5f7986;
+    text-decoration: none;
+  }
+  #pay .btn {
+    background-color: #4c616b;
+    border: none;
+    border-radius: 8px;
+    color: #eff2f3;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+  }
+  #pay .btn:hover {
+    background-color: #5f7986;
+    transition: ease-out 0.1s;
+  }
+  #pay .footer-text {
+    font-size: 1rem;
+    text-align: center;
+    color: #1a1a1a;
+  }
+  #pay .form-box *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(139, 139, 107, 0.5);
+    border-radius: 8px;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #pay .checkout-container {
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #pay .left-side {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+  }
+  #pay .right-side {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=cart.css.map */

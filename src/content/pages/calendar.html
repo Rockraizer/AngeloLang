@@ -1,0 +1,62 @@
+---
+title: 'Calendar'
+description: 'Meta description for the cart page'
+permalink: 'calendar/'
+eleventyNavigation:
+  key: Cart
+  order: 300
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/cart.css">
+{% endblock %}
+
+{% block body %}
+    
+    <h1>Calendar</h1>
+
+    <div id="calendar">
+        <!-- Calendar content will be dynamically generated here -->
+    </div>
+    
+    <div id="timeSlots">
+        <!-- Time slots will be dynamically generated here -->
+    </div>
+    
+    <script>
+        function generateCalendar() {
+            const date = new Date();
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const calendar = document.getElementById('calendar');
+        
+            for (let i = firstDay.getDate(); i <= lastDay.getDate(); i++) {
+                const day = document.createElement('button');
+                day.innerText = i;
+                day.addEventListener('click', generateTimeSlots);
+                calendar.appendChild(day);
+            }
+        }
+        
+        function generateTimeSlots() {
+            const timeSlots = document.getElementById('timeSlots');
+            timeSlots.innerHTML = ''; // Clear any existing time slots
+        
+            for (let i = 0; i < 24; i++) {
+                for (let j = 0; j < 60; j += 30) {
+                    const timeSlot = document.createElement('div');
+                    const hour = i.toString().padStart(2, '0');
+                    const minute = j.toString().padStart(2, '0');
+                    timeSlot.innerText = `${hour}:${minute}`;
+                    timeSlots.appendChild(timeSlot);
+                }
+            }
+        }
+        
+        window.onload = generateCalendar;
+        </script>
+{% endblock %}
